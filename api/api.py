@@ -12,7 +12,7 @@ def home():
 
 # http://antipode/location?longitude=33.7679192&latitude=84.5606917
 
-@app.route('/antipode', methods=['GET', 'OPTIONS'])
+@app.route('/antipode/', methods=['GET', 'OPTIONS'])
 def antipode():
     if request.method == 'OPTIONS':
         response = current_app.make_default_options_response()
