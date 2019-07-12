@@ -1,40 +1,29 @@
 import flask
-from flask import request, jsonify
+from flask import request, current_app, make_response
+from flask import render_template
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-thanks = [
-    {
-    'title': 'Thank you notes to Randall',
-    'author': 'Maya Husic soon to be officaly MRS McPherson, proudly',
-    'text': 'Dear Randall thank you for your kindness every day.',
-    'year_published': '2019'
-    },
-    {
-    'title': 'I Love You Randall',
-    'author': 'Maya Husic soon to be officaly MRS McPherson, proudly',
-    'text': 'I fucking adore you, Randall',
-    'year_published': '2019'
-    }
-]
-
 @app.route('/', methods=['GET'])
 def home():
-    return '''<h1>AntiPode API</h1>
-    <p>This site is a prototype for AntiPode API</p>'''
+    return 'hello world'
 
-
-@app.route('/api/antipode/resources/thanks/all', methods=['GET'])
-def api_all():
-    return jsonify(thanks)
 
 # http://antipode/location?longitude=33.7679192&latitude=84.5606917
 
-@app.route('/antipode', methods=['GET'])
+@app.route('/antipode', methods=['GET', 'OPTIONS'])
 def antipode():
+    if request.method == 'OPTIONS':
+        response = current_app.make_default_options_response()
+        return response
+    latitude = request.args.get('latitude')
     longitude = request.args.get('longitude')
-    return longitude
+    response = flask.jsonify({'latitude':latitude},{'longitude':longitude})
+    response.headers.add('Access-Control-Allow-Origin', '*')
 
+    return response
+    # '''<h1>The coords values are: {}, {}</h1>'''.format(latitude, longitude)
 
-app.run()
+if __name__ == '__main__':
+    app.run()

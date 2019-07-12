@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antipode</title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="../img/zemlja-favicon.png">
+  <!-- <link rel="stylesheet" href="../css/normalize.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="main-nav">
+    <ul class="nav-bar">
+      <li class="about-project">
+        <a class="about" href="about-project.html">About Antipode</a>
+      </li>
+      <li class="project-name">
+        <a class="home-page current" href="index.html">ANTIPODE</a>
+      </li>
+      <li class="coordinates">
+        <a class="coords" href="coordinates.html">Latitude || Longitude</a>
+      </li>
+    </ul>
+  </div>
+
+    <div class="main-view">
+
+      <div class="content-containers">
+        <div class="description">
+          <p class="name">Latitude || Longitude</p>
+          <p class="intro-text">Enter your coordinates below to calculate the antipode.</p>
+        </div>
+        <!-- action attr will specify where to send input info after it's submited to be processed -->
+        <!-- <div class="calculate"> -->
+          <!-- method - get or post  -->
+          <form onsubmit="return false" id="location" method="get">
+          <div class="input-form">
+            <div class="clearing">
+              <div class="labeling">
+                <label for="latitude">Latitude</label>
+              </div>
+              <div class="inputing">
+                <input id="latitude" type="text" name="latitude" value="0.000000" onfocus="this.value=''">
+              </div>
+            </div>
+            <div class="clearing">
+              <div class="labeling">
+                <label for="longitude">Longitude</label>
+              </div>
+              <div class="inputing">
+                <input id="longitude" type="text" name="longitude" value="0.000000" onfocus="this.value=''">
+              </div>
+            </div>
+            <div class="clearing">
+              <button id="calc-button" type="button" value="Calculate" onclick="results()">Calculate</button>
+            </div>
+          </div>
+          </form>
+        <!-- </div> -->
+        <div class="results">
+          <p class="name">Antipodal Coordinates</p>
+          <div class="labeling">
+            <label for="latitude-result">Latitude</label>
+          </div>
+          <div class="inputing">
+            <input id="latitude-result" type="text" name="latitude-result" disabled>
+            <!-- disabled place back into input as attribute-->
+          </div>
+          <div class="labeling">
+            <label for="longitude-result">Longitude</label>
+          </div>
+          <div class="inputing">
+            <input id="longitude-result" type="text" name="longitude-result" disabled>
+            <!-- disabled place back into input as attribute-->
+          </div>
+          <div class="mapping">
+            <p>Click <a class="map-link" href="#" title="Google Maps" target="_blank">here</a> to find the new location on the globe using Google maps.</p>
+          </div>
+          </div>
+        </div>
+
+      <div class="content-containers">
+        <!-- insert here google maps window showing automatically the antipode location calculated in the left container -->
+        <img class="planet" src="../img/blue-marble.jpg" alt="Planet Earth as seen from Lunar surface.">
+      </div>
+    </div>
+
+    <footer>
+      <ul class="social">
+        <li><a class="github" href="https://github.com/UccelloLibero" title="GitHub" target="_blank"><img src="../img/github.png" alt="GitHub"></a></li>
+        <li><a class="twitter" href="https://twitter.com/Uccell0Libero" title="Twitter" target="_blank"><img src="../img/twitter.png" alt="Twitter"></a></li>
+      </ul>
+      <p class="credits">MAYA 2019 &copy;</p>
+    </footer>
+    <script src="../js/script.js">
+
+    </script>
+
+</body>
+</html>
