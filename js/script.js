@@ -22,7 +22,7 @@ function results() {
     }
   };
 // method 'GET', url with query string preconstructed and values captured above, true for asynchronous update of page content
-request.open('GET', 'http://localhost:5000/antipode?latitude='+latitudeValue+'&longitude='+longitudeValue, true);
+request.open('GET', 'http://localhost:5000/antipode/?latitude='+latitudeValue+'&longitude='+longitudeValue, true);
 request.send();
 
 
