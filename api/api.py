@@ -22,7 +22,7 @@ def antipode_coords(latitude, longitude):
   if longitude < 0:
     anti_long = longitude + 180
   elif longitude > 0:
-    anti_long = longitude -180
+    anti_long = longitude - 180
   else:
     print('Something is not right.')
 
