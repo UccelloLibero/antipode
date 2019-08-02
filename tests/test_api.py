@@ -4,7 +4,7 @@ import pytest
 from api import antipode_coords
 
 # think about pytest fixtures
-# adding scope='module' creating this specific fixture instance to save on time, since new_antipode_coords will be invoked once per test module
+# think about how to group these test into a group of test, class?
 def latitude_value(latitude):
     if latitude <= 90 or latitude > 0:
         anti_l = latitude * -1
