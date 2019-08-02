@@ -3,6 +3,8 @@ from flask import request, current_app, make_response
 from flask import render_template
 
 # The flask request object (from flask import request) contains data that the browser sends to this app (the url parameters)
+# make_response converts the return value from a view function to a real response object that is an instance of response_class
+
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True

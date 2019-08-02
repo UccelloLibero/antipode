@@ -1,37 +1,28 @@
-import unittest
+import pytest
 
 # import function that calculates the antipodes from api folder
 from api import antipode_coords
 
-# define a new test case called TestCoords which inherits from unittest.TestCase
-class TestCoords(unittest.TestCase): #pass both longitude and latitude as arguments?
+# adding scope='module' creating this specific fixture instance to save on time, since new_antipode_coords will be invoked once per test module
+def func(latitude):
+    if latitude <= 90 or latitude > 0:
+        anti_l = latitude * -1
+    return anti_l
 
-    def setUp(self):
-        api.app.testing = True
-        self.app = api.app.test_client()
-    # define a test method
-    # test the input values passed in querystring are correct
-    # test that the result is as expected coords eg. 33.749099
 
-    # create the inputs
-    # execute the code while capturing the output
-    # compare the output to the expected result
-    def test_latitude(self):
-        anti_latitude = self.app.get('/antipode/')
-        # test the latitude value entered and test output
-        # make assertions?
-        pass
+def test_latitude():
+    assert func(33.749099) == -33.749099
 
-    def test_longitude(self):
-        # test the longitude value received and responde
-        # make assertions?
-        pass
 
-    # test for expected errors like wrong type of data passed a string
-    def test_wrong_value(self):
-        data = ''
-        with self.assertRaises(TypeError):
-            result = calc(data)
+def another_func(longitude):
+    if longitude < 0:
+        anti_long = longitude + 180
+    elif longitude > 0:
+        anti_long = longitude - 180
+    else:
+        print('Something is not right.')
+    return anti_long
 
-if __name__ == '__main__':
-    unittest.main()
+
+def test_longitude():
+    assert another_func(95.609815) == -84.390185
