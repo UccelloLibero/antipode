@@ -12,7 +12,7 @@ def latitude_value(latitude):
 
 
 def test_latitude():
-    assert func(33.749099) == -33.749099
+    assert latitude_value(33.749099) == -33.749099
 
 
 def longitude_value(longitude):
@@ -26,4 +26,4 @@ def longitude_value(longitude):
 
 
 def test_longitude():
-    assert another_func(95.609815) == -84.390185
+    assert longitude_value(95.609815) == -84.390185
