@@ -22,8 +22,22 @@ function results() {
     }
   };
 // method 'GET', url with query string preconstructed and values captured above, true for asynchronous update of page content
-request.open('GET', 'http://localhost:5000/antipode/?latitude='+latitudeValue+'&longitude='+longitudeValue, true);
+request.open('GET', 'http://127.0.0.1:5000/antipode/?latitude='+latitudeValue+'&longitude='+longitudeValue, true);
 request.send();
 
 
 }
+
+// initialize the map and set it's view to default geo coords - Atlanta - and set it's zoom level
+
+// set map view to be ATL coords as default values and on calculate update the map view to the antipode coordinates -- learn how to use the ajax response outside of the function results()
+
+
+var mymap = L.map('osmaps').setView([33.749099, -84.390185], 13);
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidWNjZWxsb2xpYmVybyIsImEiOiJjanl0NGZhdnIwMGFpM2ttZXNzY3Y4aWdpIn0.pceTn4SfqNTHcFxrprRUPw', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
