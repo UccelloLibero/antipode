@@ -1,76 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANTIPODE</title>
-<!-- link to style sheet     -->
-<link rel="stylesheet" href="../css/style.css">
-<!-- link to title png <link rel="icon" tyle="image/png" href="zemlja-favicon.png"     -->
-  </head>
-  <body>
-<!--   Main logo with page title   -->
-    <div class="logo-naziv">
-      <div class="logo"><!--  add the zemlja png here along with the naziv for the page      --></div>
-      <div class="naziv">
-        <p>ANTIPODE</p>
-      </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANTIPODE</title>
+  <!-- link to style sheet     -->
+  <!-- link to title png <link rel="icon" tyle="image/png" href="zemlja-favicon.png"     -->
+</head>
+
+<body>
+  <!--   Main logo with page title   -->
+  <header class="logo-naziv">
+    <div class="logo">
+      <!--  add the zemlja png here along with the naziv for the page      -->
     </div>
-<!--   Intro text and instructions for coords formating and input field usage   -->
-    <div class="intro">
-      <p>Have you ever wondered what is on the exact oposite side of our Earth from where you are right now or from any point on the Earth? If yes, then wonder no more. Enter your coordinates in the fields bellow to find out where you’d come out to if you start digging right now.</p>
-      <p>Here is an example of the coordinates for the input fields: 33.749099, -84.390185.</p>
+    <div class="naziv">
+      <p>ANTIPODE</p>
     </div>
-<!--   Calculation fileds   -->
-    <div class="calculation-station">
-      <p class="coords-label">Latitude</p>
-      <input id="latitude" type="text" name="latitude" value="33.749099" onfocus="this.value=''" required>
-      <p class="coords-label">Longitude</p>
-      <input id="longitude" type="text" name="longitude" value="-84.390185" onfocus="this.value=''" required>
-      <div class="buttons">
-        <button id="calc-button" type="button" value="Calculate">Calculate</button>
-        <button id="reset" type="reset" value="Reset">Reset</button>
-      </div>
+  </header>
+  <!--   Intro text and instructions for coords formating and input field usage   -->
+  <div class="intro">
+    <p>Have you ever wondered what is on the exact oposite side of our Earth from where you are right now or from any point on the Earth? If yes, then wonder no more. Enter your coordinates in the fields bellow to find out where you’d come out to if you start digging right now.</p>
+    <p>Here is an example of the coordinates for the input fields:  <a href="https://www.google.com/maps/place/33%C2%B044'56.8%22N+84%C2%B023'24.7%22W/@33.749099,-84.6703417,10z/data=!4m5!3m4!1s0x0:0x0!8m2!3d33.749099!4d-84.390185">33.749099, -84.390185</a>.</p>
+  </div>
+  <!--   Calculation fileds   -->
+  <div class="calculation-station">
+    <p class="coords-label">Latitude</p>
+    <input id="latitude" type="text" name="latitude" value="33.749099" onfocus="this.value=''">
+    <p class="coords-label">Longitude</p>
+    <input id="longitude" type="text" name="longitude" value="-84.390185" onfocus="this.value=''">
+    <div class="buttons">
+      <button id="calc-button" type="button" value="Calculate">Calculate</button>
+      <button id="reset" type="reset" value="Reset">Reset</button>
     </div>
- <!--  Result fields      -->
-    <div class="results-station">
-      <p class="coords-label">Antipode Latitude</p>
-      <input id="anti-lati" type="text" name="anti-latitude" placeholder="-33.749099" disabled="disabled">
-      <p class="coords-label">Antipode Longitude</p>
-      <input id="anti-long" type="text" name="anti-longitude" placeholder="95.609815" disapled="disabled">
-    </div>
-<!--  About coordinates    -->
-    <div class="about-coords">
-      <h2>Latitude and Longitude</h2>
-      <p>Any location on earth can be described by two numbers: latitude and longitude.</p>
-      <h3>Latitude</h3>
-      <p>In geography, latitude is a geographic coordinate that specifies the North-South position of a point on the Earth's surface; it is an angular disatance north or south from Equator measured through 90 degrees. On the planet Earth, lines of latitude are circles of different size, and are often refered to as 'parallels'. The longest is the Equator, whose latitude is zero degrees (0°). The Equator devides the planet into a Northern and Southern Hemisphere. At the poles -- North with latitude of 90° (or 90°N) and South with latitude of -90° (or 90°S) the parallel circles shrink to a point.</p>
-      <h3>Longitude</h3>
-      <p>Longitude is a geographic coordinate that specifies the East-West position of a point on the Earth's surface. On the globe, lines of constant longitude are called 'meridians' and they extend from pole to pole, like the segment boundries on a peeled orange. Every meridian must cross the Equator. The imaginery (but very important) lines of longitude run from North Pole to the South Pole. Each is identified by the number of degrees it lies East or West of the 'prime meridian', which is in Greenwich England.</p>
-      <h3>Antipodes</h3>
-      <p>In geography, the antipode of any spot on Earth is the point of Earth's surface diametrically opposite to it; the antipodes of a region similarly represent the area opposite to it. A pair of points antipodal to each other are situated such that a straight line connectin the two would pass through Earth's center. (<a href="https://en.wikipedia.org/wiki/Antipodes">More about antipodes on Wikipedia.</a>)</p>
-      <p>While working on this project I learned that the line of longitude also called meridian, is derived from the Latin word 'meri', a variation of 'medius' which denotes 'middle' and 'diem' meaning 'day'. The word once meant 'noon' and times of the day before noon were known as 'ante meridian', while times after noon were known as 'post meridian'. It is said that today's abbreviations a.m. and p.m. come from these terms, and the Sun at noon was said to be 'passing meridian'. All point on the same line of longitude experienced noon (and any other hour) at the same time and were therefore said to be on the same 'meridian line', which became 'meridian' for short.</p>
-    </div>
-<!-- About project     -->
-    <div class="about-project">
-      <h2>About ANTIPODE Project</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non vulputate ex, sed sollicitudin est. Sed efficitur, tellus sollicitudin venenatis ultrices, justo nulla maximus metus, vel semper felis nisl at risus. Ut maximus cursus suscipit. Suspendisse sodales dolor nec vulputate viverra. Vestibulum ex nulla, viverra quis felis nec, faucibus rutrum ex. Aenean ac ipsum purus. Cras ultricies nibh quis nisl vehicula vulputate. Duis id facilisis est, sed luctus quam. Sed auctor, erat in auctor suscipit, quam justo vulputate nisl, quis sodales lacus lorem at diam. Curabitur viverra dapibus felis, at accumsan urna varius iaculis. Praesent malesuada vitae odio nec scelerisque. Proin eget efficitur urna, eu fermentum mauris.</p>
-      <p>You can see the full GitHub repository <a href="https://github.com/UccelloLibero/antipode">here</a> for this project, how it's bulit and also ways you can use some of the back-end features in your own projects if interested.</p>
-    </div>
-<!-- Read more about coords and antipode     -->
-    <div class="read-more">
-      <h3>Read more about Earth's Coordinates</h3>
-      <p>If you are interested reading more about Earth's coordinates and antipode and how they're used, there is so much avaliable information. Here are links to few articles and other recourses I've relied on while building this project.</p>
-      <p>Do you know that while most of the US antipodes are in the South Indian Ocean there are three spots of the continental US (one in Montana and two in Colorado) that match dry land, remote islands in Indian Ocean. Here is a fun read capturing this information with photos as well, <a href="https://www.usends.com/antipodes.html">US Ends.</a></p>
-      <p><a href="https://www-istp.gsfc.nasa.gov/stargaze/Slatlong.htm">About Earth's Coordinates by NASA</a></p>
-      <p>Encyclopedia Britannica article about <a href="https://www.britannica.com/science/latitude">latitude and longitude</a>.</p>
-      <p>Wikipedia: <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">Geographic coordinate system</a>.</p>
-    </div>
-<!-- Footer: find me and copyrights  -->
-    <footer>
-      <p>GitHub || Twitter</p>
-      <p>Website by Maya</p>
-      <p>&copy RLM 2019</p>
-    </footer>
-  </body>
+  </div>
+  <!--  Result fields      -->
+  <div class="results-station">
+    <p class="coords-label">Antipode Latitude</p>
+    <input id="anti-lati" type="text" name="anti-latitude" placeholder="-33.749099" disabled="disabled">
+    <p class="coords-label">Antipode Longitude</p>
+    <input id="anti-long" type="text" name="anti-longitude" placeholder="95.609815" disabled="disabled">
+  </div>
+<!-- Antipode results on a map   -->
+<!--  Here insert a div with a map either google or open street maps showing the antipode coords  -->
+
+  <hr>
+
+  <!--  About coordinates    -->
+  <div class="about-coords">
+    <h2>Latitude and Longitude</h2>
+    <p>Any location on earth can be described by two numbers: latitude and longitude.</p>
+    <h3>Latitude</h3>
+    <p>In geography, latitude is a geographic coordinate that specifies the North-South position of a point on the Earth's surface; it is an angular disatance north or south from Equator measured through 90 degrees. On the planet Earth, lines of latitude
+      are circles of different size, and are often refered to as 'parallels'. The longest is the Equator, whose latitude is zero degrees (0°). The Equator devides the planet into a Northern and Southern Hemisphere, while at the poles -- North with latitude
+      of 90° (or 90°N) and South with latitude of -90° (or 90°S) the circles shrink to a point.</p>
+    <h3>Longitude</h3>
+    <p>Longitude is a geographic coordinate that specifies the East-West position of a point on the Earth's surface. On the globe, lines of constant longitude are called 'meridians' and they extend from pole to pole, like the segment boundries on a peeled
+      orange. Every meridian must cross the Equator. The imaginery (but very important) lines of longitude run from North Pole to the South Pole. Each is identified by the number of degrees it lies East or West of the 'prime meridian', which is in Greenwich
+      England.</p>
+    <h3>Antipodes</h3>
+    <p>In geography, the antipode of any spot on Earth is the point of Earth's surface diametrically opposite to it; the antipodes of a region similarly represent the area opposite to it. A pair of points antipodal to each other are situated such that a
+      straight line connectin the two would pass through Earth's center. (<a href="https://en.wikipedia.org/wiki/Antipodes">More about antipodes on Wikipedia.</a>)</p>
+    <p>While working on this project I learned that the line of longitude also called meridian, is derived from the Latin word 'meri', a variation of 'medius' which denotes 'middle' and 'diem' meaning 'day'. The word once meant 'noon' and times of the day
+      before noon were known as 'ante meridian', while times after noon were known as 'post meridian'. It is said that today's abbreviations a.m. and p.m. come from these terms, and the Sun at noon was said to be 'passing meridian'. All point on the same
+      line of longitude experienced noon (and any other hour) at the same time and were therefore said to be on the same 'meridian line', which became 'meridian' for short.</p>
+  </div>
+
+  <hr>
+
+  <!-- About project     -->
+  <div class="about-project">
+    <h2>About ANTIPODE Project</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non vulputate ex, sed sollicitudin est. Sed efficitur, tellus sollicitudin venenatis ultrices, justo nulla maximus metus, vel semper felis nisl at risus. Ut maximus cursus suscipit. Suspendisse
+      sodales dolor nec vulputate viverra. Vestibulum ex nulla, viverra quis felis nec, faucibus rutrum ex. Aenean ac ipsum purus. Cras ultricies nibh quis nisl vehicula vulputate. Duis id facilisis est, sed luctus quam. Sed auctor, erat in auctor suscipit,
+      quam justo vulputate nisl, quis sodales lacus lorem at diam. Curabitur viverra dapibus felis, at accumsan urna varius iaculis. Praesent malesuada vitae odio nec scelerisque. Proin eget efficitur urna, eu fermentum mauris.</p>
+    <p>You can see the full GitHub repository <a href="https://github.com/UccelloLibero/antipode">here</a> for this project, how it's bulit and also ways you can use some of the back-end features in your own projects if interested.</p>
+  </div>
+
+  <hr>
+
+  <!-- Read more about coords and antipode     -->
+  <div class="read-more">
+    <h3>Read more about Earth's Coordinates</h3>
+    <p>If you are interested reading more about Earth's coordinates and antipode and how they're used, there is so much avaliable information. Here are links to few articles and other recourses I've relied on while building this project.</p>
+    <p>Do you know that while most of the US antipodes are in the South Indian Ocean there are three spots of the continental US (one in Montana and two in Colorado) that match dry land, remote islands in Indian Ocean. Here is a fun read capturing this information
+      with photos as well, <a href="https://www.usends.com/antipodes.html">US Ends.</a></p>
+    <p><a href="https://www-istp.gsfc.nasa.gov/stargaze/Slatlong.htm">About Earth's Coordinates by NASA</a></p>
+    <p>Encyclopedia Britannica article about <a href="https://www.britannica.com/science/latitude">latitude and longitude</a>.</p>
+    <p>Wikipedia: <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">Geographic coordinate system</a>.</p>
+  </div>
+
+  <hr>
+
+  <!-- Footer: find me and copyrights  -->
+  <footer>
+    <p><a href="https://github.com/UccelloLibero">GitHub</a> || <a href="https://twitter.com/uccell0libero?lang=en"> Twitter</a></p>
+    <p>Website by Maya</p>
+    <p>&copy RLM 2019</p>
+  </footer>
+</body>
+
 </html>
