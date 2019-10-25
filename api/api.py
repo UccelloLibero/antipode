@@ -1,5 +1,5 @@
 import flask
-from flask import request, current_app, make_response
+from flask import request, current_app, make_response, jsonify
 from flask import render_template
 
 # The flask request object (from flask import request) contains data that the browser sends to this app (the url parameters)
