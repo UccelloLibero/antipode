@@ -1,3 +1,11 @@
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 33.749099, lng: -84.390185},
+    zoom: 8
+  });
+}
+
 //  button onclick="results()" function
 function results() {
 
@@ -33,11 +41,10 @@ request.send();
 // set map view to be ATL coords as default values and on calculate update the map view to the antipode coordinates -- learn how to use the ajax response outside of the function results()
 
 
-var mymap = L.map('osmaps').setView([antiLatitude.value, antiLongitude.value], 13);
-
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidWNjZWxsb2xpYmVybyIsImEiOiJjanl0NGZhdnIwMGFpM2ttZXNzY3Y4aWdpIn0.pceTn4SfqNTHcFxrprRUPw', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: 'your.mapbox.access.token'
-}).addTo(mymap);
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 33.749099, lng: -84.390185},
+    zoom: 8
+  });
+}
