@@ -70,15 +70,15 @@
               <input type="text" id="longitude" class="form-control" aria-describedby="longitudeHelp" onfocus="this.value=''">
               <small id="longitudeHelp" class="form-text text-muted">Here is an example of correct longitude value: -84.390185.</small>
             </div>
-            <button type="submit" class="btn btn-primary">Calculate</button>
+            <button id="calculate" type="submit" class="btn btn-primary">Calculate</button>
             <fieldset disabled>
               <div class="form-group pt-3">
                 <label for="antipodeLatitude">Antipode Latitude</label>
-                <input type="text" id="antipodeLatitude" class="form-control" placeholder="Antipode value for latitude goes here">
+                <input type="text" id="latitude-result" class="form-control" placeholder="Antipode value for latitude goes here">
               </div>
               <div class="form-group">
                 <label for="antipodeLongitude">Antipode Longitude</label>
-                <input type="text" id="antipodeLongitude" class="form-control" placeholder="Antipode value for longitude goes here">
+                <input type="text" id="longitude-result" class="form-control" placeholder="Antipode value for longitude goes here">
               </div>
             </fieldset>
           </div>
@@ -151,6 +151,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoU7yHSq-cKYsqs5a3akYI3SnCBiLFeDU&callback=initMap"
     async defer></script>
+  <script src="../js/script.js"></script>
 
 </body>
 </html>

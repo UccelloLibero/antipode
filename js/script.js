@@ -1,13 +1,5 @@
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 33.749099, lng: -84.390185},
-    zoom: 8
-  });
-}
-
 //  button onclick="results()" function
-function results() {
+document.getElementById('calculate').onclick = function() {
 
   // get input values and encode for querystring for the url in ajax request
   const latitudeValue = encodeURIComponent(document.getElementById('latitude').value);
