@@ -1,3 +1,6 @@
+var antiLatitude;
+var antiLongitude;
+
 //  button onclick="results()" function
 document.getElementById('calculate').onclick = function() {
 
