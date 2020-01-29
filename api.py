@@ -39,7 +39,7 @@ def antipode():
     latitude = request.args.get('latitude')
     longitude = request.args.get('longitude')
     anti_lat, anti_long = antipode_coords(float(latitude), float(longitude))
-    response = flask.jsonify({'latitude':anti_lat},{'longitude':anti_long})
+    response = jsonify({'latitude':anti_lat},{'longitude':anti_long})
     response.headers.add('Access-Control-Allow-Origin', '*')
 
     return response
