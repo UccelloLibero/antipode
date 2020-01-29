@@ -1,4 +1,4 @@
-import flask
+from flask import Flask
 from flask import request, current_app, make_response, jsonify
 from flask import render_template
 
@@ -6,7 +6,7 @@ from flask import render_template
 # make_response converts the return value from a view function to a real response object that is an instance of response_class
 
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
